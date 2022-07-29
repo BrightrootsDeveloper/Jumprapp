@@ -337,7 +337,7 @@ class _SearchResultState extends State<SearchResult> {
                                               ? true
                                               : false,
                                       child: ListView.builder(
-                                          physics: NeverScrollableScrollPhysics(),
+                                          physics: const NeverScrollableScrollPhysics(),
                                           itemCount: 10,
                                           itemBuilder: (context, index) {
                                             return Container(
@@ -512,6 +512,7 @@ class ExpandableContainer extends StatelessWidget {
   final double collapsedHeight;
   final Widget child;
 
+  // ignore: use_key_in_widget_constructors
   const ExpandableContainer({
     required this.child,
     this.collapsedHeight = 0.0,

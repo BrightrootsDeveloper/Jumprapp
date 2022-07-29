@@ -34,7 +34,7 @@ class _WinningMedalState extends State<WinningMedal> {
           child: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 20, right: 20),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 0.080,
             color: const Color(0xffffdc6e),

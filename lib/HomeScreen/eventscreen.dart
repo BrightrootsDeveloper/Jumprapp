@@ -411,7 +411,7 @@ class _EventScreenState extends State<EventScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => RideRanking()));
+                                  builder: (context) =>const RideRanking()));
                         },
                         child: Container(
                           margin: const EdgeInsets.only(right: 20),

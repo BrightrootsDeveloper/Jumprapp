@@ -53,14 +53,14 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.11,
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width - 40,
                 child: FormTextButton(
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SignInScreen()));
+                            builder: (context) => const SignInScreen()));
                   },
                   buttontitle: "Next",
                 ),

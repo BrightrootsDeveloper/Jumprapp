@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TextInputField extends StatefulWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final hintText;
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
   const TextInputField({Key? key, this.hintText, this.controller}) : super(key: key);
 

@@ -92,7 +92,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SearchFilter(riders: true,horses: false,)));
+                                    builder: (context) => const SearchFilter(riders: true,horses: false,)));
                           },
                           child: Container(
                             height: MediaQuery.of(context).size.height * 0.095,

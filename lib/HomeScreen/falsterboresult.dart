@@ -116,7 +116,7 @@ class _FalsterboResultState extends State<FalsterboResult> {
                                       ))),
                             ),
                             ListView.builder(
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               itemBuilder: (context, index) {
                                 return Column(children: [
                                   SizedBox(

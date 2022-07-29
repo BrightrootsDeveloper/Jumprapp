@@ -9,6 +9,7 @@ class HorseRanking extends StatefulWidget {
 }
 
 class _HorseRankingState extends State<HorseRanking> {
+  // ignore: non_constant_identifier_names
   var ListTextValue = [
     '30 days',
     '3 months',
@@ -29,7 +30,7 @@ class _HorseRankingState extends State<HorseRanking> {
   void showPickerforcurrency(BuildContext ctx) {
     showCupertinoModalPopup(
         context: context,
-        builder: (_) => Container(
+        builder: (_) => SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.290,
               child: CupertinoPicker(
@@ -59,7 +60,7 @@ class _HorseRankingState extends State<HorseRanking> {
   void showPickeryear(BuildContext ctx) {
     showCupertinoModalPopup(
         context: context,
-        builder: (_) => Container(
+        builder: (_) => SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.290,
               child: CupertinoPicker(
@@ -82,11 +83,9 @@ class _HorseRankingState extends State<HorseRanking> {
                   Text('Custom'),
                 ],
                 onSelectedItemChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selsectyear = ListTextValue[value];
-                    });
-                  }
+                  setState(() {
+                    selsectyear = ListTextValue[value];
+                  });
                 },
               ),
             ));
@@ -127,49 +126,45 @@ class _HorseRankingState extends State<HorseRanking> {
               child: Row(children: [
                 InkWell(
                   onTap: () => showPickerforcurrency(context),
-                  child: Container(
-                    child: Row(
-                      children: [
-                        Text(
-                          'Currency: $currency',
-                          style: TextStyle(
-                              fontSize:
-                                  MediaQuery.of(context).size.height * 0.018,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.height * 0.006,
-                        ),
-                        const Icon(
-                          Icons.keyboard_arrow_down_sharp,
-                          color: Colors.black,
-                        )
-                      ],
-                    ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Currency: $currency',
+                        style: TextStyle(
+                            fontSize:
+                                MediaQuery.of(context).size.height * 0.018,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.height * 0.006,
+                      ),
+                      const Icon(
+                        Icons.keyboard_arrow_down_sharp,
+                        color: Colors.black,
+                      )
+                    ],
                   ),
                 ),
                 const Spacer(),
                 InkWell(
                   onTap: () => showPickeryear(context),
-                  child: Container(
-                    child: Row(
-                      children: [
-                        Text(
-                          selsectyear.toString(),
-                          style: TextStyle(
-                              fontSize:
-                                  MediaQuery.of(context).size.height * 0.018,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.height * 0.006,
-                        ),
-                        const Icon(
-                          Icons.keyboard_arrow_down_sharp,
-                          color: Colors.black,
-                        )
-                      ],
-                    ),
+                  child: Row(
+                    children: [
+                      Text(
+                        selsectyear.toString(),
+                        style: TextStyle(
+                            fontSize:
+                                MediaQuery.of(context).size.height * 0.018,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.height * 0.006,
+                      ),
+                      const Icon(
+                        Icons.keyboard_arrow_down_sharp,
+                        color: Colors.black,
+                      )
+                    ],
                   ),
                 ),
               ]),

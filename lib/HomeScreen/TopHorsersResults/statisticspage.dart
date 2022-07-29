@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -167,7 +166,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.07,
                           ),
-                          Container(
+                          SizedBox(
                               width: MediaQuery.of(context).size.height * 0.090,
                               child: Text(
                                 '160cm',
@@ -194,7 +193,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                                     fontSize:
                                         MediaQuery.of(context).size.height *
                                             0.015,
-                                    color: Color(0xff009f86)),
+                                    color: const Color(0xff009f86)),
                               ),
                             ],
                           ),
@@ -216,7 +215,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                                     fontSize:
                                         MediaQuery.of(context).size.height *
                                             0.015,
-                                    color: Color(0xff009f86)),
+                                    color: const Color(0xff009f86)),
                               ),
                             ],
                           ),
@@ -238,7 +237,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                                     fontSize:
                                         MediaQuery.of(context).size.height *
                                             0.015,
-                                    color: Color(0xff009f86)),
+                                    color: const Color(0xff009f86)),
                               ),
                             ],
                           ),
@@ -350,7 +349,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                           fontSize: MediaQuery.of(context).size.height * 0.030,
                           fontWeight: FontWeight.bold),
                     )),
-                Container(
+                SizedBox(
                   height: MediaQuery.of(context).size.height * 0.500,
                   child: Stack(
                     children: [
@@ -419,7 +418,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.09,
                 ),
-                Container(
+                SizedBox(
                   height: MediaQuery.of(context).size.height * 0.270,
                   child: BarChart(BarChartData(
                       borderData: FlBorderData(

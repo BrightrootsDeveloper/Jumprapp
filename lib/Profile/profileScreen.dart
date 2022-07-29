@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:jumpr2/Components/formtextbutton.dart';
 import 'package:jumpr2/Profile/followpage.dart';
@@ -214,6 +215,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         });
   }
 
+  // ignore: non_constant_identifier_names
   Future _ContactUs() {
     return showModalBottomSheet(
         shape: const RoundedRectangleBorder(

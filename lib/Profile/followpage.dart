@@ -49,18 +49,53 @@ class _FollowPageState extends State<FollowPage> {
                   ),
                 ),
                 const Spacer(),
-                Container(
-                  // margin: const EdgeInsets.only(right: 20),
-                  child: Column(
-                    children: [
-                      Row(
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Horse',
+                          style: TextStyle(
+                              color: const Color(0xff02285e),
+                              fontSize:
+                                  MediaQuery.of(context).size.height * 0.018),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.004,
+                        ),
+                        Transform.scale(
+                          scale: 1.3,
+                          child: Checkbox(
+                            tristate: true,
+                            value: ischecked,
+                            side: BorderSide(
+                                color: (ischecked == false)
+                                    ? const Color(0xff02285e)
+                                    : Colors.grey),
+                            checkColor: const Color(0xff02285e),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0))),
+                            onChanged: (newValue) {
+                              setState(() {
+                                ischecked = !ischecked;
+                              });
+                            },
+                            activeColor: Colors.transparent,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.028,
+                      child: Row(
                         children: [
                           Text(
-                            'Horse',
+                            'Rider',
                             style: TextStyle(
                                 color: const Color(0xff02285e),
-                                fontSize:
-                                    MediaQuery.of(context).size.height * 0.018),
+                                fontSize: MediaQuery.of(context).size.height *
+                                    0.018),
                           ),
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.004,
@@ -69,18 +104,18 @@ class _FollowPageState extends State<FollowPage> {
                             scale: 1.3,
                             child: Checkbox(
                               tristate: true,
-                              value: ischecked,
+                              value: ischecked2,
                               side: BorderSide(
                                   color: (ischecked == false)
                                       ? const Color(0xff02285e)
                                       : Colors.grey),
                               checkColor: const Color(0xff02285e),
                               shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10.0))),
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(10.0))),
                               onChanged: (newValue) {
                                 setState(() {
-                                  ischecked = !ischecked;
+                                  ischecked2 = !ischecked2;
                                 });
                               },
                               activeColor: Colors.transparent,
@@ -88,46 +123,8 @@ class _FollowPageState extends State<FollowPage> {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.028,
-                        child: Row(
-                          children: [
-                            Text(
-                              'Rider',
-                              style: TextStyle(
-                                  color: const Color(0xff02285e),
-                                  fontSize: MediaQuery.of(context).size.height *
-                                      0.018),
-                            ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.004,
-                            ),
-                            Transform.scale(
-                              scale: 1.3,
-                              child: Checkbox(
-                                tristate: true,
-                                value: ischecked2,
-                                side: BorderSide(
-                                    color: (ischecked == false)
-                                        ? const Color(0xff02285e)
-                                        : Colors.grey),
-                                checkColor: const Color(0xff02285e),
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10.0))),
-                                onChanged: (newValue) {
-                                  setState(() {
-                                    ischecked2 = !ischecked2;
-                                  });
-                                },
-                                activeColor: Colors.transparent,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                    )
+                  ],
                 )
               ],
             ),

@@ -15,7 +15,7 @@ class _NewEventsState extends State<NewEvents> {
   void showPicker(BuildContext ctx) {
     showCupertinoModalPopup(
         context: context,
-        builder: (_) => Container(
+        builder: (_) => SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.290,
               child: CupertinoPicker(
@@ -39,7 +39,7 @@ class _NewEventsState extends State<NewEvents> {
                       sortby = "Date";
                     });
                   }
-                  print(value);
+                
                 },
               ),
             ));
@@ -48,14 +48,14 @@ class _NewEventsState extends State<NewEvents> {
   void showmonthPicker(BuildContext ctx) {
     showCupertinoModalPopup(
         context: context,
-        builder: (_) => Container(
+        builder: (_) => SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.290,
               child: CupertinoPicker(
                 backgroundColor: Colors.white,
                 itemExtent: 30,
                 scrollController: FixedExtentScrollController(initialItem: 1),
-                children: [Text('Past Month'), Text('Custom')],
+                children: const [Text('Past Month'), Text('Custom')],
                 onSelectedItemChanged: (value) {
                   if (value == 0) {
                     setState(() {
@@ -107,25 +107,23 @@ class _NewEventsState extends State<NewEvents> {
               child: Row(children: [
                 InkWell(
                   onTap: () => showPicker(context),
-                  child: Container(
-                    child: Row(
-                      children: [
-                        Text(
-                          'Sort by: $sortby',
-                          style: TextStyle(
-                              fontSize:
-                                  MediaQuery.of(context).size.height * 0.018,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.height * 0.006,
-                        ),
-                        const Icon(
-                          Icons.keyboard_arrow_down_sharp,
-                          color: Colors.black,
-                        )
-                      ],
-                    ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Sort by: $sortby',
+                        style: TextStyle(
+                            fontSize:
+                                MediaQuery.of(context).size.height * 0.018,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.height * 0.006,
+                      ),
+                      const Icon(
+                        Icons.keyboard_arrow_down_sharp,
+                        color: Colors.black,
+                      )
+                    ],
                   ),
                 ),
                 const Spacer(),
@@ -175,7 +173,7 @@ class _NewEventsState extends State<NewEvents> {
                               MaterialPageRoute(
                                   builder: (context) => const SearchResult()));
                         },
-                        child: Container(
+                        child: SizedBox(
                           width: MediaQuery.of(context).size.width - 40,
                           child: Row(children: [
                             Container(
@@ -195,7 +193,7 @@ class _NewEventsState extends State<NewEvents> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Container(
+                                SizedBox(
                                   width: MediaQuery.of(context).size.height *
                                       0.140,
                                   child: Text(

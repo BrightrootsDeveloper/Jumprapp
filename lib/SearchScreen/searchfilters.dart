@@ -5,15 +5,21 @@ import 'package:flutter/material.dart';
 class SearchFilter extends StatefulWidget {
   final horses;
   final riders;
+  // ignore: non_constant_identifier_names
   final Class;
+  // ignore: non_constant_identifier_names
   final Clearround;
+  // ignore: non_constant_identifier_names
   final Placement;
   const SearchFilter(
       {Key? key,
       this.horses = false,
       this.riders = false,
+      // ignore: non_constant_identifier_names
       this.Class = false,
+      // ignore: non_constant_identifier_names
       this.Clearround = false,
+      // ignore: non_constant_identifier_names
       this.Placement = false})
       : super(key: key);
 
@@ -47,9 +53,7 @@ class _SearchFilterState extends State<SearchFilter> {
         child: Center(
             child: Column(
           children: [
-            (widget.horses == true ||
-                    widget.Clearround == true ||
-                    widget.Placement == true)
+            (widget.horses == true )
                 ? HorseFilter()
                 : Container(),
             (widget.riders == true) ? RiderFilter() : Container(),
@@ -58,15 +62,13 @@ class _SearchFilterState extends State<SearchFilter> {
                     widget.Class == true)
                 ? EventFilter(widget.Class)
                 : Container(),
-            (widget.Clearround == true || widget.Placement == true)
-                ? PerformanceFilter()
-                : Container()
           ],
         )),
       ),
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget RiderFilter() {
     return Container(
       color: const Color(0xfff2f1f6),
@@ -357,6 +359,7 @@ class _SearchFilterState extends State<SearchFilter> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget PerformanceFilter() {
     return Container(
       color: const Color(0xfff2f1f6),

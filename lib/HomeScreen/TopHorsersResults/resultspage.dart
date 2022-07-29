@@ -9,6 +9,7 @@ class ResultsPage extends StatefulWidget {
 }
 
 class _ResultsPageState extends State<ResultsPage> {
+  // ignore: prefer_typing_uninitialized_variables
   var currentindex;
   @override
   Widget build(BuildContext context) {
@@ -89,7 +90,6 @@ class _ResultsPageState extends State<ResultsPage> {
                                   left: 20, top: 0, right: 20, bottom: 20),
                               child: InkWell(
                                 onTap: () {
-                                  print('object');
                                   setState(() {
                                     currentindex == null
                                         ? currentindex = indexes
