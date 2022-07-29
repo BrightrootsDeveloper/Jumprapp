@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jumpr2/Components/formtextbutton.dart';
 import 'package:jumpr2/Components/inputtextfield.dart';
+import 'package:jumpr2/HomeScreen/homescreen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(
                 width: MediaQuery.of(context).size.width - 40,
-                child: TextInputField(
+                child: const TextInputField(
                   hintText: "Email",
                 )),
             SizedBox(
@@ -43,7 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(
                 width: MediaQuery.of(context).size.width - 40,
-                child: TextInputField(
+                child: const TextInputField(
                   hintText: "Password",
                 )),
             SizedBox(
@@ -52,12 +53,18 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(
                 width: MediaQuery.of(context).size.width - 40,
                 child: FormTextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
+                  },
                   buttontitle: "Sign-In",
                 )),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width - 40,
               child: Row(
                 children: [
